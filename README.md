@@ -10,6 +10,10 @@ npm install svg-css-icon -g
 svg-css-icon --input test --output test/icon.css --class ic
 ```
 
+## 预览
+
+[https://tmaize.github.io/svg-css-icon/](https://tmaize.github.io/svg-css-icon/)
+
 ## 参考
 
 [聊聊纯 CSS 图标](https://antfu.me/posts/icons-in-pure-css-zh)
