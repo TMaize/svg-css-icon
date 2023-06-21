@@ -1,0 +1,10 @@
+.class {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  color: inherit;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  background-size: 100% 100%;
+}

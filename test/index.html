@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./icon.css" />
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+      }
+
+      body > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px dashed #ccc;
+        width: 100px;
+        height: 100px;
+        border-collapse: collapse;
+        font-size: 50px;
+        position: relative;
+        position: relative;
+        color: #2b96a4;
+      }
+
+      body > div > span::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: attr(class);
+        font-size: 12px;
+        text-align: center;
+        padding: 2px 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span class="ic ic-home"></span>
+    </div>
+    <div>
+      <span class="ic ic-file"></span>
+    </div>
+    <div>
+      <span class="ic ic-certificate"></span>
+    </div>
+  </body>
+</html>

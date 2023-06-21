@@ -1,0 +1,46 @@
+{
+  "name": "svg-css-icon",
+  "version": "0.0.1",
+  "description": "Nodejs-based tool for convert SVG to css icons",
+  "main": "./src/index.mjs",
+  "homepage": "https://github.com/TMaize/svg-css-icon",
+  "bugs": {
+    "url": "https://github.com/TMaize/svg-css-icon"
+  },
+  "author": {
+    "name": "TMaize",
+    "email": "1772314831@qq.com",
+    "url": "https://github.com/TMaize"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TMaize/svg-css-icon.git"
+  },
+  "scripts": {
+    "test": "node bin/svg-css-icon.js --input test --output test/icon.css --class ic"
+  },
+  "keywords": [
+    "svg",
+    "icon",
+    "converter"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "license": "ISC",
+  "files": [
+    "bin",
+    "src",
+    "README.md"
+  ],
+  "bin": {
+    "svg-css-icon": "./bin/svg-css-icon.js"
+  },
+  "dependencies": {
+    "@trysound/sax": "0.2.0",
+    "svgo": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "16"
+  }
+}
