@@ -8,8 +8,13 @@ function getStringArg(name) {
   return process.argv[idx + 1]
 }
 
-build({
-  input: getStringArg('input'),
-  output: getStringArg('output'),
-  class: getStringArg('class')
-})
+try {
+  build({
+    input: getStringArg('input'),
+    output: getStringArg('output'),
+    class: getStringArg('class')
+  })
+} catch (err) {
+  console.error(err.message)
+  process.exit(1)
+}

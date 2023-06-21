@@ -45,7 +45,7 @@ module.exports = function build(options) {
   for (let i = 0; i < files.length; i++) {
     const file = files[i]
     const name = path.basename(file).replace(/\.svg$/i, '')
-    console.log('build', file)
+    console.log(' build:', file)
 
     let svg = fs.readFileSync(file, 'utf-8')
     const colorful = isColorful(svg)
@@ -55,10 +55,10 @@ module.exports = function build(options) {
     if (colorful) {
       content += `\n.${options.class}-${name} {\n  background-image: url(${svg});\n}\n`
     } else {
-      content += `\n.${options.class}-${name} {\n  --data: url(${svg});\n  mask-image: var(--data);\n  -webkit-mask-image: var(--data); background-color: currentColor;\n}\n`
+      content += `\n.${options.class}-${name} {\n  --data: url(${svg});\n  mask-image: var(--data);\n  -webkit-mask-image: var(--data);\n  background-color: currentColor;\n}\n`
     }
   }
 
-  console.log('output', options.output)
+  console.log('output:', options.output)
   fs.writeFileSync(options.output, content)
 }
