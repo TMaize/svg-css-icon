@@ -7,6 +7,8 @@ Nodejs-based tool for convert SVG to css icons
 ```
 npm install svg-css-icon -g
 
+svg-css-icon --help
+
 svg-css-icon --input test --output test/icon.css --class ic
 ```
 

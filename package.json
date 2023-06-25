@@ -17,7 +17,9 @@
     "url": "git://github.com/TMaize/svg-css-icon.git"
   },
   "scripts": {
-    "test": "node bin/svg-css-icon.js --input test --output test/icon.css --class ic"
+    "test": "npm run build:base64 && npm run build:utf8",
+    "build:base64": "node bin/svg-css-icon.js --encode base64 --input test --output test/icon-base64.css --class aa",
+    "build:utf8": "  node bin/svg-css-icon.js --encode utf8   --input test --output test/icon-uft8.css   --class bb"
   },
   "keywords": [
     "svg",

@@ -57,9 +57,20 @@ function isColorful(content) {
  * @param {string} content svg内容
  * @return {string}
  */
-function encodeSVG(content) {
+function encodeSVG(content, type) {
+  if (type === 'utf8') {
+    const encoded = content
+      .replace(/"/g, "'")
+      .replace(/%/g, '%25')
+      .replace(/#/g, '%23')
+      .replace(/{/g, '%7B')
+      .replace(/}/g, '%7D')
+      .replace(/</g, '%3C')
+      .replace(/>/g, '%3E')
+    return `data:image/svg+xml;utf8,${encoded}`
+  }
   const buffer = Buffer.from(content)
-  return (dataUri = `data:image/svg+xml;base64,${buffer.toString('base64')}`)
+  return `data:image/svg+xml;base64,${buffer.toString('base64')}`
 }
 
 module.exports = {

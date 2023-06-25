@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./icon.css" />
+    <link rel="stylesheet" href="./icon-base64.css" />
+    <link rel="stylesheet" href="./icon-uft8.css" />
     <style>
-      body {
+      .wrap {
         margin: 0;
         padding: 10px;
         display: flex;
         flex-flow: row wrap;
       }
 
-      body > div {
+      .wrap > div {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -29,7 +30,7 @@
         margin-top: -1px;
       }
 
-      body > div > span::after {
+      .wrap > div > span::after {
         position: absolute;
         left: 0;
         bottom: 0;
@@ -42,14 +43,28 @@
     </style>
   </head>
   <body>
-    <div>
-      <span class="ic ic-home"></span>
+    <div class="wrap">
+      <div>
+        <span class="aa aa-home"></span>
+      </div>
+      <div>
+        <span class="aa aa-file"></span>
+      </div>
+      <div>
+        <span class="aa aa-certificate"></span>
+      </div>
     </div>
-    <div>
-      <span class="ic ic-file"></span>
-    </div>
-    <div>
-      <span class="ic ic-certificate"></span>
+
+    <div class="wrap">
+      <div>
+        <span class="bb bb-home"></span>
+      </div>
+      <div>
+        <span class="bb bb-file"></span>
+      </div>
+      <div>
+        <span class="bb bb-certificate"></span>
+      </div>
     </div>
   </body>
 </html>
