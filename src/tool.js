@@ -10,14 +10,14 @@ const sax = require('@trysound/sax')
 function compressSVG(content, colorful) {
   const plugins = ['preset-default']
 
-  if (!colorful) {
-    plugins.push({
-      name: 'removeAttrs',
-      params: {
-        attrs: 'fill'
-      }
-    })
-  }
+  // if (!colorful) {
+  //   plugins.push({
+  //     name: 'removeAttrs',
+  //     params: {
+  //       attrs: 'fill'
+  //     }
+  //   })
+  // }
 
   return optimize(content, { plugins }).data
 }
